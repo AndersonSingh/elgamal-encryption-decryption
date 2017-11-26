@@ -6,7 +6,8 @@ from Crypto.Cipher import DES
 if __name__ == '__main__':
 
 	# shared secret key for DES encryption.
-	secret_key = '-8B key-'
+	secret_key = raw_input('Enter the shared secret key.\n')
+	secret_key = secret_key.strip()
 
 	# open file with private key and read the encrypted private key. 
 	private_key_file = open('privatekey.dat', 'r')
