@@ -9,6 +9,10 @@ if __name__ == '__main__':
 	secret_key = raw_input('Enter the shared secret key.\n')
 	secret_key = secret_key.strip()
 
+	if len(secret_key) != 8:
+		print 'Incorrect secret key length.'
+		exit()
+
 	# open file with private key and read the encrypted private key. 
 	private_key_file = open('privatekey.dat', 'r')
 	encrypted_private_key = private_key_file.read()
